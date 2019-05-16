@@ -6,10 +6,10 @@ body {
   color: #333;
 }
 
+
 *,
 *:before,
-*:after,
-  {
+*:after {
   box-sizing: border-box;
 }
 
@@ -108,7 +108,8 @@ hr {
 
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1250px;
+  padding: 0 25px;
   margin: 0 auto;
 }
 
@@ -122,9 +123,6 @@ hr {
 .header_inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 0 50px;
 }
 
 .header_logo {
@@ -272,7 +270,6 @@ hr {
 .slider_inner {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
 }
 
 .slider_item {
@@ -312,13 +309,16 @@ hr {
 /* About */
 
 .card {
+  margin: 80px -15px 0;
   display: flex;
+  flex-wrap: wrap;
+
   justify-content: space-between;
-  padding: 0 50px;
 }
 
 .card_item {
-  margin-right: 10px;
+  width: 33.33333%;
+  padding: 0 15px;
 }
 
 .card_inner {
@@ -346,6 +346,8 @@ hr {
 
 .card_img img {
   display: block;
+  max-width: 100%;
+  height: auto;
 
   transition: opacity .2s;
 }
@@ -388,11 +390,14 @@ hr {
 
 .stat {
   display: flex;
-  padding: 0 50px;
+  flex-wrap: wrap;
+
 }
 
 .stat_item {
   flex: 1 1 0;
+
+
 
   padding: 70px 25px;
 
@@ -421,13 +426,21 @@ hr {
 
 .services {
   display: flex;
-  padding: 0 50px;
+  flex-wrap: wrap;
+
 }
 
 .services_item {
+  width: 33.3333%;
   position: relative;
-  flex: 1 1 0;
   padding-left: 90px;
+  margin-bottom: 30px;
+
+}
+
+.services_item-border {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .services_icon {
@@ -461,6 +474,8 @@ hr {
 
 .devices_img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .devices_img--iphone {
@@ -474,16 +489,21 @@ hr {
 /* WeDo */
 
 .wedo {
-  padding: 0 50px;
   display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
 }
 
 .wedo_item {
   width: 50%;
+  padding: 15px;
 }
 
 .wedo_img {
   display: block;
+  max-width: 100%;
+  height: auto;
+
 }
 
 /* Accordion */
@@ -565,7 +585,6 @@ hr {
 
 .quote {
   position: relative;
-  padding: 0 50px;
 
 }
 
@@ -668,20 +687,20 @@ hr {
 .social {
   display: flex;
   justify-content: center;
-
+  align-items: center;
 }
 
 .social_item {
-  width: 100%;
-  max-width: 30px;
-  padding: 15px;
+  width: 55px;
+  height: 55px;
 
+  font-size: 30px;
   text-decoration: none;
   color: #f38181;
+  line-height: 1;
 
   background: #fce38a;
   border-left: 1px solid #f38181;
-
 }
 
 .social_item:first-child {
@@ -693,12 +712,15 @@ hr {
   color: #fff;
 }
 
+.social_item i {
+  height: 100%;
+}
 
 /* Bran Logo */
 
 .brand_logo {
   display: flex;
-  padding: 0 50px;
+
   justify-content: space-between;
 
   align-items: center;
@@ -844,7 +866,7 @@ hr {
 .blog {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+
 }
 
 .blog_item {
@@ -973,7 +995,6 @@ hr {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-  padding: 0 50px;
 }
 
 .footer_logo {
@@ -1184,10 +1205,232 @@ subscribe_input:focus {
   font-size: 14px;
   text-align: center;
   color: #333;
-
 }
 
 .copyright a {
   color: #f38181;
   text-decoration: none;
+}
+
+
+/* Monitors and laptops */
+@media (max-width: 1250px) {
+
+  /* Intro */
+  .intro_suptitle {
+    font-size: 52px;
+  }
+
+  .intro_title {
+    font-size: 120px;
+  }
+
+  /* Reviews */
+  .quote_text {
+    font-size: 18px;
+  }
+
+
+
+
+
+}
+
+
+/* Tabs and landscape */
+@media (max-width: 990px) {
+
+  /* Intro */
+  .intro_suptitle {
+    font-size: 32px;
+  }
+
+  .intro_title {
+    font-size: 80px;
+  }
+
+  /*Stat*/
+  .stat {
+    justify-content: center;
+  }
+
+  .stat_item {
+    flex: none;
+    width: 33.3333%;
+    padding: 30px 20px;
+
+    border: 0;
+    border-bottom: 1px solid #b5eae0;
+  }
+
+  .stat_item:last-child {
+    border: 0;
+  }
+
+  /* Services */
+  .services_item {
+    width: 50%;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 30px;
+  }
+
+}
+
+/* portrait */
+@media (max-width: 770px) {
+
+  /* Navigation */
+  .nav {
+    display: none;
+  }
+
+  /* Section */
+  .section {
+    padding: 40px 0;
+  }
+
+  .section--iphone {
+    padding: 0;
+  }
+
+  /* Slider */
+  .slider_title {
+    display: none;
+  }
+
+  .slider_num {
+    text-align: center;
+  }
+
+  .slider_item.active:before {
+    width: 50%;
+  }
+
+  /* Card */
+  .card {
+    justify-content: center;
+  }
+
+  .card_item {
+    width: 75%;
+    margin-bottom: 15px;
+  }
+
+  .card_img img {
+    width: 100%;
+  }
+
+  card_item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* stat */
+  .stat_item {
+    width: 50%;
+  }
+
+  /* Services */
+  .services_item {
+    width: 100%;
+    border-bottom: 0;
+    padding-bottom: 5px;
+    padding-left: 40px;
+  }
+
+  .services_icon {
+    left: 0;
+  }
+
+  /* We Do */
+  .wedo_item {
+    width: 100%;
+  }
+
+  .wedo_img {
+    display: none;
+  }
+
+  /* Reviews */
+  .quote_text {
+    font-size: 14px;
+  }
+
+  .quote_subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Mobile phone */
+@media (max-width: 575px) {
+
+
+  /* Intro */
+  .intro_suptitle {
+    font-size: 22px;
+  }
+
+  .intro_title {
+    font-size: 50px;
+  }
+
+  /* Section */
+  .section_header {
+    margin-bottom: 50px;
+  }
+
+  .section_suptitle {
+    font-size: 20px;
+  }
+
+  .section_title {
+    font-size: 24px;
+  }
+
+  .section_title:after {
+    margin: 20px auto;
+  }
+
+  /* Stats */
+
+  .stat_item {
+    width: 100%;
+  }
+
+  .stat_item:last-child {
+    border-bottom: 0;
+  }
+
+  .stat_number {
+    font-size: 52px;
+  }
+
+  /* Devices */
+  .devices_img {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .devices_img--iphone {
+    max-width: 150px;
+    bottom: -50px;
+    right: 80px;
+  }
+
+ /* Reviews */
+  .quote_item {
+    margin: 0;
+  }
+
+  .quote_text {
+    font-size: 14px;
+  }
+
+  .quote_subtitle {
+    font-size: 16px;
+  }
+
+  .quote_icon {
+    top: -10px;
+    left: 30px;
+  }
 }
