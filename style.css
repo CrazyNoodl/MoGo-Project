@@ -40,6 +40,10 @@ hr {
   padding: 80px 0;
 }
 
+.page {
+  overflow: hidden;
+}
+
 
 .section--iphone {
   margin-bottom: 40px;
@@ -596,6 +600,7 @@ hr {
 }
 
 .quote_icon {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -720,6 +725,7 @@ hr {
 
 .brand_logo {
   display: flex;
+  margin: 0 -15px;
 
   justify-content: space-between;
 
@@ -727,8 +733,16 @@ hr {
 }
 
 .brand_logo_item {
-  margin: 0 10px;
+  padding: 0 15px;
 }
+
+.brand_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
+
 
 
 /* Works */
@@ -821,6 +835,7 @@ hr {
 
 .clients_photo {
   position: absolute;
+  display: block;
   top: 0;
   left: 40px;
   z-index: 1;
@@ -987,14 +1002,21 @@ hr {
 
 .footer {
   padding-top: 75px;
+  margin: 0 -15px;
 
   background: #f8f8f8;
+}
+
+.footer_coll {
+  padding: 0 15px;
 }
 
 .footer_inner {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  flex-wrap: wrap;
 }
 
 .footer_logo {
@@ -1058,6 +1080,7 @@ hr {
   width: 100%;
   max-width: 380px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .subscribe_input {
@@ -1175,12 +1198,14 @@ subscribe_input:focus {
 }
 
 .instagram_item {
-  width: 32.3333%;
+  width: 33.3333%;
   border-bottom: 1px solid #fff;
 }
 
 .instagram_item img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .more_photo {
@@ -1231,206 +1256,391 @@ subscribe_input:focus {
   }
 
 
+  /* Tabs and landscape */
+  @media (max-width: 990px) {
 
+    /* Intro */
+    .intro_suptitle {
+      font-size: 32px;
+    }
 
+    .intro_title {
+      font-size: 80px;
+    }
 
-}
+    /*Stat*/
+    .stat {
+      justify-content: center;
+    }
 
+    .stat_item {
+      flex: none;
+      width: 33.3333%;
+      padding: 30px 20px;
 
-/* Tabs and landscape */
-@media (max-width: 990px) {
+      border: 0;
+      border-bottom: 1px solid #b5eae0;
+    }
 
-  /* Intro */
-  .intro_suptitle {
-    font-size: 32px;
+    .stat_item:last-child {
+      border: 0;
+    }
+
+    /* Services */
+    .services_item {
+      width: 50%;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 30px;
+    }
+
+    /* Happy Client */
+    .clients_item {
+      width: 100%;
+    }
+
+    /* Footer */
+    .footer_coll--first {
+      width: 100%;
+    }
+
+    .footer_coll--second,
+    .footer_coll--third {
+      width: 50%;
+    }
+
+    /* Instargram */
+    .instagram {
+      justify-content: flex-start;
+    }
+
+    .instagram_item {
+      width: auto;
+      border-right: 1px solid #fff;
+    }
   }
 
-  .intro_title {
-    font-size: 80px;
+
+
+
+
+
+
+
+
+
+
+  /* portrait */
+  @media (max-width: 770px) {
+
+    /* Navigation */
+    .nav {
+      display: none;
+    }
+
+    /* Section */
+    .section {
+      padding: 40px 0;
+    }
+
+    .section--iphone {
+      padding: 0;
+    }
+
+    /* Slider */
+    .slider_title {
+      display: none;
+    }
+
+    .slider_num {
+      text-align: center;
+    }
+
+    .slider_item.active:before {
+      width: 50%;
+    }
+
+    /* Card */
+    .card {
+      justify-content: center;
+    }
+
+    .card_item {
+      width: 75%;
+      margin-bottom: 15px;
+    }
+
+    .card_img img {
+      width: 100%;
+    }
+
+    card_item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* stat */
+    .stat_item {
+      width: 50%;
+    }
+
+    /* Services */
+    .services_item {
+      width: 100%;
+      border-bottom: 0;
+      padding-bottom: 5px;
+      padding-left: 40px;
+    }
+
+    .services_icon {
+      left: 0;
+    }
+
+    /* We Do */
+    .wedo_item {
+      width: 100%;
+    }
+
+    .wedo_img {
+      display: none;
+    }
+
+    /* Reviews */
+    .quote {
+      padding: 0 25px;
+    }
+
+    .quote_text {
+      font-size: 14px;
+    }
+
+    .quote_subtitle {
+      font-size: 18px;
+    }
+
+    .quote_item {
+      padding-left: 0;
+      margin: 0 55px;
+    }
+
+    .quote_text {
+      font-size: 14px;
+    }
+
+    .quote_subtitle {
+      font-size: 16px;
+    }
+
+    .quote_icon {
+      position: static;
+      margin: 0 auto 20px;
+    }
+
+    /* works */
+    .works {
+      flex-wrap: wrap;
+    }
+
+    .works_coll {
+      flex: none;
+      width: 50%;
+    }
+
+    /* Blog */
+
+    .blog {
+      flex-wrap: wrap;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .blog_item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .blog_header {
+      margin-bottom: 10px;
+    }
+
+    .blog_title {
+      margin-bottom: 10px;
+
+    }
+
+    .blog_content {
+      margin-bottom: 5px;
+    }
+
+    .blog_footer {
+      padding-top: 5px;
+    }
+
+    /* Footer */
+    .footer_coll {
+      width: 100%;
+    }
+
   }
 
-  /*Stat*/
-  .stat {
-    justify-content: center;
+
+
+
+
+
+
+  /* Mobile phone */
+  @media (max-width: 575px) {
+
+
+    /* Intro */
+    .intro_suptitle {
+      font-size: 22px;
+    }
+
+    .intro_title {
+      font-size: 50px;
+    }
+
+    /* Section */
+
+    .section--gray {
+      padding: 20px 0;
+    }
+
+    .section_header {
+      margin-bottom: 50px;
+    }
+
+    .section_suptitle {
+      font-size: 20px;
+    }
+
+    .section_title {
+      font-size: 24px;
+    }
+
+    .section_title:after {
+      margin: 20px auto;
+    }
+
+    /* Stats */
+
+    .stat_item {
+      width: 100%;
+    }
+
+    .stat_item:last-child {
+      border-bottom: 0;
+    }
+
+    .stat_number {
+      font-size: 52px;
+    }
+
+    /* Devices */
+    .devices_img {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    .devices_img--iphone {
+      max-width: 150px;
+      bottom: -50px;
+      right: 80px;
+    }
+
+    /*Review*/
+    .quote {
+      padding: 0;
+    }
+
+    .quote_icon {
+      max-width: 100px;
+    }
+
+    .quote_btn {
+      top: 10%;
+    }
+
+    /* Logos */
+    .brand_logo {
+      flex-wrap: wrap;
+    }
+
+    .brand_logo_item {
+      width: 50%;
+    }
+
+    .brand_img {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .brand_img-last {
+      margin-bottom: 0;
+    }
+
+    /* Works */
+    .works_title {
+      font-size: 10px;
+    }
+
+    .works_text {
+      font-size: 12px;
+    }
+
+    /* Quote */
+    .quote_subtitle {
+      font-size: 13px;
+    }
+
+    /* Happy Client */
+
+    .clients_photo {
+      position: static;
+      margin: 0 auto;
+    }
+
+    .clients_content {
+      padding: 0 40px;
+    }
+
+    .clients_item {
+      text-align: center;
+    }
+
+    .clients_name {
+      margin-bottom: 0;
+    }
+
+    .clients_text:before {
+      margin: 10px auto;
+    }
+
+    .clients_content {
+      padding: 0;
+    }
+
+    .clients_item:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* subscribe */
+    .subscribe {
+      max-width: none;
+    }
+
+    .subscribe_btn {
+      width: auto;
+    }
+
+    .subscribe_input {
+      margin-bottom: 10px;
+    }
+
+    .subscribe_input,
+    .subscribe_btn {
+      width: 100%;
+    }
+
   }
-
-  .stat_item {
-    flex: none;
-    width: 33.3333%;
-    padding: 30px 20px;
-
-    border: 0;
-    border-bottom: 1px solid #b5eae0;
-  }
-
-  .stat_item:last-child {
-    border: 0;
-  }
-
-  /* Services */
-  .services_item {
-    width: 50%;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 30px;
-  }
-
-}
-
-/* portrait */
-@media (max-width: 770px) {
-
-  /* Navigation */
-  .nav {
-    display: none;
-  }
-
-  /* Section */
-  .section {
-    padding: 40px 0;
-  }
-
-  .section--iphone {
-    padding: 0;
-  }
-
-  /* Slider */
-  .slider_title {
-    display: none;
-  }
-
-  .slider_num {
-    text-align: center;
-  }
-
-  .slider_item.active:before {
-    width: 50%;
-  }
-
-  /* Card */
-  .card {
-    justify-content: center;
-  }
-
-  .card_item {
-    width: 75%;
-    margin-bottom: 15px;
-  }
-
-  .card_img img {
-    width: 100%;
-  }
-
-  card_item:last-child {
-    margin-bottom: 0;
-  }
-
-  /* stat */
-  .stat_item {
-    width: 50%;
-  }
-
-  /* Services */
-  .services_item {
-    width: 100%;
-    border-bottom: 0;
-    padding-bottom: 5px;
-    padding-left: 40px;
-  }
-
-  .services_icon {
-    left: 0;
-  }
-
-  /* We Do */
-  .wedo_item {
-    width: 100%;
-  }
-
-  .wedo_img {
-    display: none;
-  }
-
-  /* Reviews */
-  .quote_text {
-    font-size: 14px;
-  }
-
-  .quote_subtitle {
-    font-size: 18px;
-  }
-}
-
-/* Mobile phone */
-@media (max-width: 575px) {
-
-
-  /* Intro */
-  .intro_suptitle {
-    font-size: 22px;
-  }
-
-  .intro_title {
-    font-size: 50px;
-  }
-
-  /* Section */
-  .section_header {
-    margin-bottom: 50px;
-  }
-
-  .section_suptitle {
-    font-size: 20px;
-  }
-
-  .section_title {
-    font-size: 24px;
-  }
-
-  .section_title:after {
-    margin: 20px auto;
-  }
-
-  /* Stats */
-
-  .stat_item {
-    width: 100%;
-  }
-
-  .stat_item:last-child {
-    border-bottom: 0;
-  }
-
-  .stat_number {
-    font-size: 52px;
-  }
-
-  /* Devices */
-  .devices_img {
-    margin: 0 auto;
-    max-width: 320px;
-  }
-
-  .devices_img--iphone {
-    max-width: 150px;
-    bottom: -50px;
-    right: 80px;
-  }
-
- /* Reviews */
-  .quote_item {
-    margin: 0;
-  }
-
-  .quote_text {
-    font-size: 14px;
-  }
-
-  .quote_subtitle {
-    font-size: 16px;
-  }
-
-  .quote_icon {
-    top: -10px;
-    left: 30px;
-  }
-}
