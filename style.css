@@ -1502,6 +1502,10 @@ subscribe_input:focus {
 
     /* Section */
 
+    .section {
+      padding: 25px 0;
+    }
+
     .section--gray {
       padding: 20px 0;
     }
@@ -1548,7 +1552,13 @@ subscribe_input:focus {
       right: 80px;
     }
 
+    /* Services */
+    .services_item {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
     /*Review*/
+
     .quote {
       padding: 0;
     }
@@ -1594,6 +1604,10 @@ subscribe_input:focus {
     }
 
     /* Happy Client */
+
+    .clients {
+      margin-top: 0;
+    }
 
     .clients_photo {
       position: static;
@@ -1641,6 +1655,16 @@ subscribe_input:focus {
     .subscribe_input,
     .subscribe_btn {
       width: 100%;
+    }
+
+    /* Footer */
+    .instagram {
+      max-width: 266px;
+      margin: 0 auto;
+    }
+
+    .instagram_item {
+      width: 33%;
     }
 
   }
