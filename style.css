@@ -153,6 +153,7 @@ hr {
   width: 100%;
   max-width: 860px;
   margin: 0 auto;
+  min-height: 570px;
 
   text-align: center;
 }
@@ -378,7 +379,7 @@ hr {
 
 
 .card_content i {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .card_item:hover .card_content {
@@ -471,21 +472,20 @@ hr {
 
 .devices {
   position: relative;
-  max-width: 500px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .devices_img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .devices_img--iphone {
   position: absolute;
   bottom: -70px;
-  right: 0;
+  right: 290px;
   z-index: 1;
 }
 
@@ -512,15 +512,11 @@ hr {
 
 /* Accordion */
 
-.accordion {
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+.accordion {}
 
 .accordion_item {
   border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
 }
 
 .accordion_item.active .accordion_text {
@@ -696,10 +692,11 @@ hr {
 }
 
 .social_item {
+  display: flex;
   width: 55px;
   height: 55px;
 
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
   color: #f38181;
   line-height: 1;
@@ -707,6 +704,8 @@ hr {
   background: #fce38a;
   border-left: 1px solid #f38181;
 }
+
+
 
 .social_item:first-child {
   border-left: 0;
@@ -718,7 +717,7 @@ hr {
 }
 
 .social_item i {
-  height: 100%;
+  margin: auto;
 }
 
 /* Bran Logo */
@@ -726,6 +725,7 @@ hr {
 .brand_logo {
   display: flex;
   margin: 0 -15px;
+  flex-wrap: wrap;
 
   justify-content: space-between;
 
@@ -734,13 +734,18 @@ hr {
 
 .brand_logo_item {
   padding: 0 15px;
+  transition: .2s;
+
 }
+
+.brand_logo_item:hover {
+      transform: scale(1.3);
+    }
 
 .brand_img {
   display: block;
   max-width: 100%;
   height: auto;
-
 }
 
 
@@ -776,7 +781,7 @@ hr {
   max-width: 100%;
   height: auto;
 
-  transition: opacity .2s;
+  transition: opacity .3s;
 }
 
 .works_info {
@@ -1293,6 +1298,15 @@ subscribe_input:focus {
       padding-bottom: 30px;
     }
 
+    /*  */
+
+    .devices_img--iphone {
+      position: absolute;
+      bottom: -70px;
+      right: 125px;
+      z-index: 1;
+    }
+
     /* Happy Client */
     .clients_item {
       width: 100%;
@@ -1332,6 +1346,11 @@ subscribe_input:focus {
   /* portrait */
   @media (max-width: 770px) {
 
+    .section {
+      padding: 20px 0;
+    }
+
+
     /* Navigation */
     .nav {
       display: none;
@@ -1343,7 +1362,7 @@ subscribe_input:focus {
     }
 
     .section--iphone {
-      padding: 0;
+      padding-bottom: 0;
     }
 
     /* Slider */
@@ -1388,6 +1407,10 @@ subscribe_input:focus {
       border-bottom: 0;
       padding-bottom: 5px;
       padding-left: 40px;
+    }
+
+    .devices_img--iphone {
+      right: 0;
     }
 
     .services_icon {
@@ -1463,7 +1486,6 @@ subscribe_input:focus {
 
     .blog_title {
       margin-bottom: 10px;
-
     }
 
     .blog_content {
@@ -1488,96 +1510,132 @@ subscribe_input:focus {
 
 
   /* Mobile phone */
+
+
+
   @media (max-width: 575px) {
-
-
-    /* Intro */
-    .intro_suptitle {
-      font-size: 22px;
-    }
-
-    .intro_title {
-      font-size: 50px;
-    }
 
     /* Section */
 
     .section {
-      padding: 25px 0;
-    }
-
-    .section--gray {
       padding: 20px 0;
     }
 
     .section_header {
-      margin-bottom: 50px;
+      margin: 0 auto 15px;
+    }
+
+    .section--iphone {
+      padding-bottom: 0;
     }
 
     .section_suptitle {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .section_title {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .section_title:after {
       margin: 20px auto;
     }
 
-    /* Stats */
+    .section_text {
+      font-size: 14px;
+    }
 
+    /* Intro */
+    .intro_inner {
+      min-height: 400px;
+      padding-top: 50px;
+    }
+
+    .intro_suptitle {
+      font-size: 20px;
+    }
+
+    .intro_title {
+      font-size: 45px;
+    }
+
+    .intro_title:after {
+      margin: 25px auto;
+    }
+
+    /* WeDo */
+
+    .wedo_item {
+      padding-top: 0;
+    }
+
+    .works_coll {
+      flex: none;
+      width: 50%;
+    }
+
+    .card {
+      margin: 40px 0;
+    }
+
+    .card_item {
+      width: 100%;
+    }
+
+
+    /* Stat */
     .stat_item {
       width: 100%;
     }
 
-    .stat_item:last-child {
-      border-bottom: 0;
-    }
-
     .stat_number {
-      font-size: 52px;
+      font-size: 50px;
     }
 
-    /* Devices */
+
+    /*Devices*/
     .devices_img {
-      margin: 0 auto;
       max-width: 320px;
     }
 
     .devices_img--iphone {
       max-width: 150px;
-      bottom: -50px;
-      right: 80px;
+      bottom: -80px;
+      right: 0;
     }
 
-    /* Services */
-    .services_item {
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    /*Review*/
-
+    /* Quote */
     .quote {
       padding: 0;
     }
 
+    .quote_item {
+      margin: 0;
+      padding: 30px 0;
+    }
+
     .quote_icon {
-      max-width: 100px;
+      max-width: 125px;
     }
 
     .quote_btn {
-      top: 10%;
+      top: 20%;
+    }
+
+    .quote_subtitle {
+      font-size: 15px;
     }
 
     /* Logos */
+
     .brand_logo {
-      flex-wrap: wrap;
+      padding: 30px 0;
     }
 
     .brand_logo_item {
       width: 50%;
+
+      transition: .2s;
     }
 
     .brand_img {
@@ -1589,19 +1647,6 @@ subscribe_input:focus {
       margin-bottom: 0;
     }
 
-    /* Works */
-    .works_title {
-      font-size: 10px;
-    }
-
-    .works_text {
-      font-size: 12px;
-    }
-
-    /* Quote */
-    .quote_subtitle {
-      font-size: 13px;
-    }
 
     /* Happy Client */
 
@@ -1609,62 +1654,20 @@ subscribe_input:focus {
       margin-top: 0;
     }
 
-    .clients_photo {
-      position: static;
-      margin: 0 auto;
-    }
-
-    .clients_content {
-      padding: 0 40px;
-    }
-
     .clients_item {
       text-align: center;
-    }
-
-    .clients_name {
-      margin-bottom: 0;
-    }
-
-    .clients_text:before {
-      margin: 10px auto;
     }
 
     .clients_content {
       padding: 0;
     }
 
-    .clients_item:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* subscribe */
-    .subscribe {
-      max-width: none;
-    }
-
-    .subscribe_btn {
-      width: auto;
-    }
-
-    .subscribe_input {
-      margin-bottom: 10px;
-    }
-
-    .subscribe_input,
-    .subscribe_btn {
-      width: 100%;
-    }
-
-    /* Footer */
-    .instagram {
-      max-width: 266px;
+    .clients_photo {
+      padding-bottom: 20px;
+      position: static;
       margin: 0 auto;
     }
 
-    .instagram_item {
-      width: 33%;
+    .clients_text:before {
+      margin: 10px auto;
     }
-
-  }
