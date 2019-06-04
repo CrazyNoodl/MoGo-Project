@@ -4,42 +4,50 @@
 <head>
   <meta charset="UTF -8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="slider/owl.carousel.min.css">
+  <link rel="stylesheet" href="slider/owl.theme.default.min.css">
+
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Mogo</title>
 </head>
 
 <body>
 
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header_inner">
+        <div class="header_logo">MoGo</div>
+        <nav class="nav">
+          <a class="nav_link" href="#">About</a>
+          <a class="nav_link" href="#">Service</a>
+          <a class="nav_link" href="#">Blog</a>
+          <a class="nav_link" href="#">Work</a>
+          <a class="nav_link" href="#">Contact</a>
+          <a class="nav_link" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+          <a class="nav_link" href="x#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </nav>
+
+        <div class="burger">
+          <span class="burger__item">Menu</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
   <div class="page">
 
     <!-- Intro -->
 
-    <div class="intro">
-
-      <header class="header">
-        <div class="container">
-          <div class="header_inner">
-            <div class="header_logo">MoGo</div>
-            <nav class="nav">
-              <a class="nav_link active" href="#">About</a>
-              <a class="nav_link" href="#">Service</a>
-              <a class="nav_link" href="#">Blog</a>
-              <a class="nav_link" href="#">Work</a>
-              <a class="nav_link" href="#">Contact</a>
-              <a class="nav_link" href="#">
-                <i class="fas fa-search"></i>
-              </a>
-              <a class="nav_link" href="#">
-                <i class="fas fa-shopping-cart"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
+    <div class="intro" id="intro">
       <div class="container">
+
         <div class="intro_inner">
           <h2 class="intro_suptitle">Creative Template</h2>
           <h1 class="intro_title">Welcome to MoGo</h1>
@@ -50,7 +58,6 @@
       <!-- Slider -->
 
       <div class="slider">
-
         <div class="container">
           <div class="slider_inner">
             <div class="slider_item active">
@@ -71,8 +78,8 @@
             </div>
           </div>
         </div>
-
       </div>
+
     </div> <!-- /.intro -->
 
     <!-- Section About Us -->
@@ -292,16 +299,31 @@
       <div class="container">
 
         <div class="quote">
-          <a class="quote_btn quote_btn--prev" href="#">Prev</a>
-          <a class="quote_btn quote_btn--next" href="#">Next</a>
-          <div class="quote_item">
-            <img class="quote_icon" src="img/review.png">
-            <div class="quote_text">“Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-            <div class="quote_subtitle">Jon Doe</div>
-          </div>
-        </div>
+          <div class="owl-carousel">
 
-      </div>
+            <div class="quote_item">
+              <img class="quote_icon" src="img/review.png">
+              <div class="quote_text">“Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Jon Doe</div>
+            </div>
+
+            <div class="quote_item">
+              <img class="quote_icon" src="img/review.png">
+              <div class="quote_text">“Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Jon Doe</div>
+            </div>
+
+
+            <div class="quote_item">
+              <img class="quote_icon" src="img/review.png">
+              <div class="quote_text">“Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Jon Doe</div>
+            </div>
+
+          </div> <!-- /.owl-carousel -->
+        </div> <!-- /.quote -->
+
+      </div> <!-- /.container -->
     </section>
 
     <!-- Our Team -->
@@ -527,17 +549,31 @@
 
     <div class="section">
       <div class="container">
+
         <div class="review">
-          <a class="quote_btn quote_btn--prev" href="#">Prev</a>
-          <a class="quote_btn quote_btn--next" href="#">Next</a>
-          <div class="quote_item">
-            <img class="quote_icon review_quote_icon" src="img/review.png">
-            <div class="quote_text">Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-            <div class="quote_subtitle">Joshua Earle</div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="owl-carousel">
+            <div class="quote_item">
+              <img class="quote_icon review_quote_icon" src="img/review.png">
+              <div class="quote_text">Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Joshua Earle</div>
+            </div>
+
+            <div class="quote_item">
+              <img class="quote_icon review_quote_icon" src="img/review.png">
+              <div class="quote_text">Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Joshua Earle</div>
+            </div>
+
+            <div class="quote_item">
+              <img class="quote_icon review_quote_icon" src="img/review.png">
+              <div class="quote_text">Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+              <div class="quote_subtitle">Joshua Earle</div>
+            </div>
+
+          </div> <!-- /.owl-carousel -->
+        </div> <!-- /.review -->
+      </div> <!-- /.container -->
+    </div> <!-- /.section -->
 
     <!-- Happy clients -->
 
@@ -836,7 +872,16 @@
 
       </div> <!-- /.container -->
     </footer>
-  </div>
+
+  </div> <!-- /.page -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src="slider/owl.carousel.min.js"></script>
+
+  <script src="main.js"></script>
+
 </body>
 
 </html>
